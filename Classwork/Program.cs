@@ -11,7 +11,6 @@ namespace Classwork
         static void Main(string[] args)
         {
             Console.WriteLine("\nTask 1\nОбласти значений численных типов данных:");
-            
             Console.WriteLine("byte [{0}; {1}]", Byte.MinValue, Byte.MaxValue);
             Console.WriteLine("sbyte [{0}; {1}]", SByte.MinValue, SByte.MaxValue);
             Console.WriteLine("short [{0}; {1}]", Int16.MinValue, Int16.MaxValue);
@@ -25,6 +24,45 @@ namespace Classwork
             Console.WriteLine("decimal [{0}; {1}]", Decimal.MinValue, Decimal.MaxValue);
             //Console.WriteLine("char [{0}; {1}]", Char.MinValue, Char.MaxValue);
 
+            Console.WriteLine("\nTask 3");
+            Console.Write("Введите строку: ");
+            string str1 = Console.ReadLine();
+            string str2 = "";
+            for (int i = 0; i<str1.Length; i++)
+            {
+                if (char.ToLower(str1[i]) == str1[i])
+                {
+                    str2 += char.ToUpper(str1[i]);
+                }
+                else
+                {
+                    str2 += char.ToLower(str1[i]);
+                }
+            }
+            Console.WriteLine("После форматирования: "+str2);
+            
+            /*
+            Console.WriteLine("\nTask 4");
+            Console.Write("Введите строку: ");
+            str1 = Console.ReadLine();
+            Console.Write("Введите подстроку: ");
+            str2 = Console.ReadLine();
+            int count = 0;
+            int i = 0;
+            while (true)
+            {
+                i = str1.IndexOf(str2, i);
+                if (i == -1)
+                {
+                    break;
+                }
+                else
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine("Количество вхождений: {0}", count);
+            */
 
             Console.ReadKey();
         }
