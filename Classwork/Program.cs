@@ -52,7 +52,8 @@ namespace Classwork
             //Console.Write("Введите строку: ");
             //string str1 = Console.ReadLine();
             //string str2 = "";
-            //for (int i = 0; i<str1.Length; i++)
+            //int i = 0;
+            //for (; i < str1.Length; i++)
             //{
             //    if (char.ToLower(str1[i]) == str1[i])
             //    {
@@ -63,26 +64,39 @@ namespace Classwork
             //        str2 += char.ToLower(str1[i]);
             //    }
             //}
-            //Console.WriteLine("После форматирования: "+str2);
-            
-            
-            Console.WriteLine("\nTask 4");
-            Console.Write("Введите строку: ");
-            string str1 = Console.ReadLine();
-            Console.Write("Введите подстроку: ");
-            string str2 = Console.ReadLine();
-            int count = -1;
-            int i = 0;
-            do
-            {
-                i = str1.IndexOf(str2, i) + 1;
-                count++;
-            }
-            while (i != 0);
-            Console.WriteLine($"Количество вхождений: {count}");
-            
+            //Console.WriteLine("После форматирования: " + str2);
+
+
+            //Console.WriteLine("\nTask 4");
+            //Console.Write("Введите строку: ");
+            //str1 = Console.ReadLine();
+            //Console.Write("Введите подстроку: ");
+            //str2 = Console.ReadLine();
+            //int count = -1;
+            //i = 0;
+            //do
+            //{
+            //    i = str1.IndexOf(str2, i) + 1;
+            //    count++;
+            //}
+            //while (i != 0);
+            //Console.WriteLine($"Количество вхождений: {count}");
+
+            Console.WriteLine("\nTask 5");
+            Console.Write("Введите скорость тараканчика в км/ч: ");
+            float cockroachSpeed = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine($"Скорость таракана в см/сек: {speedConvert(cockroachSpeed)}");
+
 
             Console.ReadKey();
         }
+        
+        static byte speedConvert(float x)
+        {
+            x /= 0.036f;
+            return (byte)(x-x%1);
+        }
+
+
     }
 }
