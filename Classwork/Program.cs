@@ -6,11 +6,22 @@ using System.Threading.Tasks;
 
 namespace Classwork
 {
+    struct Client
+    {
+        public string name;
+        public string city;
+        public byte age;
+        public ushort pin;
+
+    }
+
+
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\nTask 1\nОбласти значений численных типов данных:");
+
+            Console.WriteLine("\nTask 1\nОбласти значений типов данных:");
             Console.WriteLine("byte [{0}; {1}]", Byte.MinValue, Byte.MaxValue);
             Console.WriteLine("sbyte [{0}; {1}]", SByte.MinValue, SByte.MaxValue);
             Console.WriteLine("short [{0}; {1}]", Int16.MinValue, Int16.MaxValue);
@@ -22,7 +33,20 @@ namespace Classwork
             Console.WriteLine("float [{0}; {1}]", Single.MinValue, Single.MaxValue);
             Console.WriteLine("double [{0}; {1}]", Double.MinValue, Double.MaxValue);
             Console.WriteLine("decimal [{0}; {1}]", Decimal.MinValue, Decimal.MaxValue);
-            //Console.WriteLine("char [{0}; {1}]", Char.MinValue, Char.MaxValue);
+            Console.WriteLine("char [{0}; {1}]", Char.MinValue, Char.MaxValue);
+
+            Console.WriteLine("\nTask 3");
+            Client user;
+            Console.Write("Введите имя: ");
+            user.name = Console.ReadLine();
+            Console.Write("Введите город: ");
+            user.city = Console.ReadLine();
+            Console.Write("Введите возраст: ");
+            user.age = Convert.ToByte(Console.ReadLine());
+            Console.Write("Введите пин-код: ");
+            user.pin = Convert.ToUInt16(Console.ReadLine());
+            Console.WriteLine($"Данные о клиенте:\nИмя\t{user.name}\nГород\t{user.city}\nВозраст\t{user.age}\nПин-код\t{user.pin}");
+
 
             Console.WriteLine("\nTask 3");
             Console.Write("Введите строку: ");
