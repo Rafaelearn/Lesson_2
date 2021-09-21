@@ -20,7 +20,6 @@ namespace Classwork
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("\nTask 1\nОбласти значений типов данных:");
             Console.WriteLine("byte [{0}; {1}]", Byte.MinValue, Byte.MaxValue);
             Console.WriteLine("sbyte [{0}; {1}]", SByte.MinValue, SByte.MaxValue);
@@ -34,6 +33,7 @@ namespace Classwork
             Console.WriteLine("double [{0}; {1}]", Double.MinValue, Double.MaxValue);
             Console.WriteLine("decimal [{0}; {1}]", Decimal.MinValue, Decimal.MaxValue);
             Console.WriteLine("char [{0}; {1}]", Char.MinValue, Char.MaxValue);
+
 
             Console.WriteLine("\nTask 2");
             Client user;
@@ -82,21 +82,23 @@ namespace Classwork
             while (i != 0);
             Console.WriteLine($"Количество вхождений: {count}");
 
+
             Console.WriteLine("\nTask 5");
             Console.Write("Введите скорость тараканчика в км/ч: ");
             float cockroachSpeed = Convert.ToSingle(Console.ReadLine());
             Console.WriteLine($"Скорость таракана в см/сек: {SpeedConvert(cockroachSpeed)}");
+
 
             Console.WriteLine("\nTask 6");
             Console.Write("Введите возраст отца: ");
             byte ageDad = Convert.ToByte(Console.ReadLine());
             Console.Write("Введите возраст сына: ");
             byte ageSon = Convert.ToByte(Console.ReadLine());
-            if (ageDad > 2*ageSon)
+            if (ageDad > 2 * ageSon)
             {
                 Console.WriteLine($"Через {AgeDouble(ageDad, ageSon)} лет Отец будет вдвое старше сына");
             }
-            else if (ageDad < 2*ageSon)
+            else if (ageDad < 2 * ageSon)
             {
                 Console.WriteLine($"  {AgeDouble(ageDad, ageSon)} лет назад Отец был вдвое старше сына");
             }
@@ -105,8 +107,16 @@ namespace Classwork
                 Console.WriteLine("Отцец вдвое старше сына");
             }
 
-            
 
+            Console.WriteLine("\nTask 7");
+            Console.Write("Цена бутылки виски: ");
+            ushort normPrice = Convert.ToUInt16(Console.ReadLine());
+            Console.Write("Скидка в %: ");
+            byte salePrice = Convert.ToByte(Console.ReadLine());
+            Console.Write("Стоимость отпуска: ");
+            int holidayPrice = Convert.ToInt32(Console.ReadLine());
+            float numBottle = (float)holidayPrice / (normPrice * ((float)salePrice / 100));
+            Console.WriteLine($"Дабы покрыть Ваши расходы купите {numBottle-1%numBottle} бутылок отменного виски");
 
             Console.ReadKey();
         }
