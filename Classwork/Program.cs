@@ -115,7 +115,7 @@ namespace Classwork
             Console.Write("Стоимость отпуска: ");
             int holidayPrice = Convert.ToInt32(Console.ReadLine());
             float numBottle = (float)holidayPrice / (normPrice * ((float)salePrice / 100));
-            Console.WriteLine($"Дабы покрыть Ваши расходы купите {numBottle-1%numBottle} бутылок отменного виски");
+            Console.WriteLine($"Дабы покрыть Ваши расходы купите {Math.Floor(numBottle)} бутылок отменного виски");
 
             Console.ReadKey();
         }
@@ -123,7 +123,7 @@ namespace Classwork
         static byte SpeedConvert(float x)
         {
             x /= 0.036f;
-            return (byte)(x-x%1);
+            return (byte)(Math.Floor(x));
         }
 
         static byte AgeDouble(byte ageDad, byte ageSon)
