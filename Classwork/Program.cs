@@ -32,7 +32,6 @@ namespace Classwork
             Console.WriteLine("float [{0}; {1}]", Single.MinValue, Single.MaxValue);
             Console.WriteLine("double [{0}; {1}]", Double.MinValue, Double.MaxValue);
             Console.WriteLine("decimal [{0}; {1}]", Decimal.MinValue, Decimal.MaxValue);
-            Console.WriteLine("char [{0}; {1}]", Char.MinValue, Char.MaxValue);
 
 
             Console.WriteLine("\nTask 2");
@@ -94,11 +93,11 @@ namespace Classwork
             byte ageDad = Convert.ToByte(Console.ReadLine());
             Console.Write("Введите возраст сына: ");
             byte ageSon = Convert.ToByte(Console.ReadLine());
-            if (ageDad > 2 * ageSon)
+            if (ageDad < 2 * ageSon)
             {
                 Console.WriteLine($"Через {AgeDouble(ageDad, ageSon)} лет Отец будет вдвое старше сына");
             }
-            else if (ageDad < 2 * ageSon)
+            else if (ageDad > 2 * ageSon)
             {
                 Console.WriteLine($"  {AgeDouble(ageDad, ageSon)} лет назад Отец был вдвое старше сына");
             }
