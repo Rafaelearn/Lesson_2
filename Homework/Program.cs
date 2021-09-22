@@ -12,7 +12,7 @@ namespace Homework
         {
             Random random = new Random();
 
-            Console.WriteLine("\nTask A1.1");
+            Console.WriteLine("Task A1.1");
             Console.Write("Секунд прошло с  начала суток: ");
             int time = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($" {time/3600 - time/3600%1} полных часов прошло с начала суток;");
@@ -34,7 +34,7 @@ namespace Homework
             Console.WriteLine("\nTask A1.4");
             x = random.Next(10, 99);
             int y = (x - x % 10) / 10; // количество десятков числа
-            Console.Write($"Дано двузначное число {x}");
+            Console.WriteLine($"Дано двузначное число {x}");
             Console.WriteLine($"а) число десятков в нем: {y}");
             Console.WriteLine($"б) число единиц в нем: {x%10}");
             Console.WriteLine($"в) сумму его цифр: {x%10 + y}");
@@ -69,15 +69,17 @@ namespace Homework
 
             Console.WriteLine("\nTask A1.8");
             x = (random.Next(49) + 1) * 3;
-            Console.WriteLine($"k — число, кратное трем; k = {x}");
+            Console.WriteLine($"k  = 3n (k<150, n есть число натуральное) k = {x}");
             x = x % 30 / 3;
-            Console.WriteLine($"k-я цифра есть {x}");
-            x = random.Next(50) * 3 + 1;
+            Console.WriteLine($"Цифра с порядковым номером k  - {x}");
+            x = random.Next(49) * 3 + 1;
+            Console.WriteLine($"k  = 3n + 1 (k<150, n есть число натуральное) k = {x}");
             x = 1 + (x - x % 300) / 300;
-            Console.WriteLine($"k — число, кратное трем; k = {x}");
-            x = random.Next(50) * 3 + 2;
+            Console.WriteLine($"Цифра с порядковым номером k  - {x}");
+            x = random.Next(49) * 3 + 2;
+            Console.WriteLine($"k  = 3n + 2 (k<150, n есть число натуральное) k = {x}");
             x = (x - x % 30) / 30;
-            Console.WriteLine($"k — число, кратное трем; k = {x}");
+            Console.WriteLine($"Цифра с порядковым номером k  - {x}");
 
 
 
@@ -97,7 +99,7 @@ namespace Homework
             Console.WriteLine($"\nб) не (не X и Y) или (X и не Z) = {!(!xBool && yBool) || (xBool && !zBool)}");
             Console.WriteLine($"\nв) X или не Y и не (X или не Z) = {xBool || !yBool && !(xBool || !zBool)}");
 
-            Console.WriteLine("1. Противоположности притягиваются");
+            Console.WriteLine("\n1. Противоположности притягиваются");
             Console.Write("Введите количество лепестков цветка Тимми: ");
             x = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите количество лепестков цветка Сара: ");
@@ -111,7 +113,7 @@ namespace Homework
                 Console.WriteLine("Очень жаль.... но Тимми и Сара не влюблены");
             }
 
-            Console.WriteLine("2. Избегайте обезвоживания");
+            Console.WriteLine("\n2. Избегайте обезвоживания");
             Console.WriteLine("Введите время велопрогулки Натана (в часах): ");
             count = Convert.ToSingle(Console.ReadLine());
             count *= 0.5f;
