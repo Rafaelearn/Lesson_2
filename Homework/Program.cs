@@ -15,14 +15,14 @@ namespace Homework
             Console.WriteLine("Task A1.1");
             Console.Write("Секунд прошло с  начала суток: ");
             int time = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($" {time/3600 - time/3600%1} полных часов прошло с начала суток;");
+            Console.WriteLine($" {Math.Floor((double)time/3600)} полных часов прошло с начала суток;");
             Console.WriteLine($" {time % 60} полных полных минут прошло с начала очередного часа;");
-            Console.WriteLine($" {time % 3660 % 60} сколько полных секунд прошло с начала очередной минуты;");
+            Console.WriteLine($" {time % 3600 % 60} сколько полных секунд прошло с начала очередной минуты;");
 
             Console.WriteLine("\nTask A1.2");
             Console.WriteLine("Дан прямоугольник с размерами 543 х 130 мм. Сколько квадратов со стороной 130 мм можно отрезать от него ? ");
             float count = 543 / 130;
-            Console.WriteLine($"Ответ: {count - count%1}");
+            Console.WriteLine($"Ответ: {Math.Floor(count)}");
 
             Console.WriteLine("\nTask A1.3");
             Console.Write("Пусть x - порядковый номер текущего месяца.\nВведите сколько меcяцев прошло с 2 января 2020 года: ");
@@ -117,8 +117,7 @@ namespace Homework
             Console.WriteLine("Введите время велопрогулки Натана (в часах): ");
             count = Convert.ToSingle(Console.ReadLine());
             count *= 0.5f;
-            count = count - count % 1;
-            Console.WriteLine($"Натан нужно взять с собой на велопрогулку {count} литров воды.");
+            Console.WriteLine($"Натан нужно взять с собой на велопрогулку {Math.Floor(count)} литров воды.");
 
             Console.ReadKey();
         }
