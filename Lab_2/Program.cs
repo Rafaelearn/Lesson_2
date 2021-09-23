@@ -40,7 +40,7 @@ namespace Lab_2
             Console.WriteLine("\nExercises 3.2");
             Account user;
             Console.Write("1.Текущий счет.\n2.Сберегательный счет.\nВыберите тип счета(1 или 2): ");
-            user.type = (TypeAccount)Convert.ToUInt32(Console.ReadLine());
+            user.type = (TypeAccount)Convert.ToByte(Console.ReadLine());
             Console.Write("Введите номер счета: ");
             user.number = Convert.ToUInt64(Console.ReadLine());
             Console.Write("Введите баланс: ");
