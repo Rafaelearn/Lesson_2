@@ -28,7 +28,7 @@ namespace Classwork
             Console.WriteLine("float [{0}; {1}]", Single.MinValue, Single.MaxValue);
             Console.WriteLine("double [{0}; {1}]", Double.MinValue, Double.MaxValue);
             Console.WriteLine("decimal [{0}; {1}]", Decimal.MinValue, Decimal.MaxValue);
-
+            Console.WriteLine("char [{0}; {1}]", Char.MinValue, Char.MaxValue);
 
             Console.WriteLine("\nTask 2");
             Client user;
