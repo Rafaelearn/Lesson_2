@@ -108,14 +108,9 @@ namespace Homework
                     else
                     {
                         yBool = false;
-                        if (!zBool)
-                        {
-                            zBool = true;
-                        }
-                        else
-                        {
-                            zBool = false;
-                        }
+
+                        zBool = !zBool ? true : false; 
+
                     }
                 }
 
