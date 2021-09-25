@@ -69,13 +69,7 @@ namespace Classwork
             Console.Write("Введите подстроку: ");
             str2 = Console.ReadLine();
             int count = -1;
-            i = 0;
-            do
-            {
-                i = str1.IndexOf(str2, i) + 1;
-                count++;
-            }
-            while (i != 0);
+            count = (str1.Length - str1.Replace(str2, "").Length) / str2.Length;
             Console.WriteLine($"Количество вхождений: {count}");
 
 
@@ -100,7 +94,7 @@ namespace Classwork
             }
             else
             {
-                Console.WriteLine("Отцец вдвое старше сына");
+                Console.WriteLine("Отец вдвое старше сына");
             }
 
 
