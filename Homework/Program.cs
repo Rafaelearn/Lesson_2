@@ -25,11 +25,11 @@ namespace Homework
             int x = 1;
             time = Convert.ToInt32(Console.ReadLine());
             x = x + time % 12;
-            Console.WriteLine(x);
+            Console.WriteLine($"x = {x}");
 
             Console.WriteLine("\nTask A1.4");
             x = random.Next(10, 99);
-            int y = x / 10; // количество десятков числа
+            int y = x / 10;
             Console.WriteLine($"Дано двузначное число {x}");
             Console.WriteLine($"а) число десятков в нем: {y}");
             Console.WriteLine($"б) число единиц в нем: {x%10}");
@@ -38,15 +38,15 @@ namespace Homework
 
             Console.WriteLine("\nTask A1.5");
             x = random.Next(100, 999);
-            y = x / 100; // количество сотен числа
-            Console.Write($"Дано трехзначное число {x} (abc)");
+            y = x / 100; 
+            Console.Write($"Дано трехзначное число {x} (abc). ");
             x = x % 100 * 10 + y;
             Console.WriteLine($"Число после форматирования {x} (bca)");
 
             Console.WriteLine("\nTask A1.6");
             x = 237;
-            y = x / 100; // количество сотен числа
-            Console.Write($"Дано трехзначное число {x} (cab)");
+            y = x / 100;
+            Console.Write($"Дано трехзначное число {x} (cab). ");
             x = x % 100 * 10 + y;
             Console.Write($"Обратно его преобразуя, получили {x} (abc)");
 
@@ -122,6 +122,7 @@ namespace Homework
             }
             while (xBool || zBool || yBool);
 
+
             Console.WriteLine("\n1. Противоположности притягиваются");
             Console.Write("Введите количество лепестков цветка Тимми: ");
             x = Convert.ToInt32(Console.ReadLine());
@@ -135,6 +136,7 @@ namespace Homework
             {
                 Console.WriteLine("Очень жаль.... но Тимми и Сара не влюблены");
             }
+
 
             Console.WriteLine("\n2. Избегайте обезвоживания");
             Console.WriteLine("Введите время велопрогулки Натана (в часах): ");

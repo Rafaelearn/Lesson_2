@@ -30,6 +30,7 @@ namespace Classwork
             Console.WriteLine("decimal [{0}; {1}]", Decimal.MinValue, Decimal.MaxValue);
             Console.WriteLine("char [{0}; {1}]", Char.MinValue, Char.MaxValue);
 
+
             Console.WriteLine("\nTask 2");
             Client user;
             Console.Write("Введите имя: ");
