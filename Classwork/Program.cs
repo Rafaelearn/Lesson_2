@@ -100,13 +100,22 @@ namespace Classwork
 
             Console.WriteLine("\nTask 7");
             Console.Write("Цена бутылки виски: ");
-            ushort normPrice = Convert.ToUInt16(Console.ReadLine());
-            Console.Write("Скидка в %: ");
-            byte salePrice = Convert.ToByte(Console.ReadLine());
-            Console.Write("Стоимость отпуска: ");
-            int holidayPrice = Convert.ToInt32(Console.ReadLine());
-            float numBottle = (float)holidayPrice / (normPrice * ((float)salePrice / 100));
-            Console.WriteLine($"Дабы покрыть Ваши расходы купите {Math.Floor(numBottle)} бутылок отменного виски");
+            try
+            {
+                ushort normPrice = Convert.ToUInt16(Console.ReadLine());
+                Console.Write("Скидка в %: ");
+                byte salePrice = Convert.ToByte(Console.ReadLine());
+                Console.Write("Стоимость отпуска: ");
+                int holidayPrice = Convert.ToInt32(Console.ReadLine());
+                float numBottle = (float)holidayPrice / (normPrice * ((float)salePrice / 100));
+                Console.WriteLine($"Дабы покрыть Ваши расходы купите {Math.Floor(numBottle)} бутылок отменного виски");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
 
             Console.ReadKey();
         }
