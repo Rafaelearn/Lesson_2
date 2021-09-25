@@ -107,8 +107,15 @@ namespace Classwork
                 byte salePrice = Convert.ToByte(Console.ReadLine());
                 Console.Write("Стоимость отпуска: ");
                 int holidayPrice = Convert.ToInt32(Console.ReadLine());
-                float numBottle = (float)holidayPrice / (normPrice * ((float)salePrice / 100));
-                Console.WriteLine($"Дабы покрыть Ваши расходы купите {Math.Floor(numBottle)} бутылок отменного виски");
+                if (salePrice != 0)
+                {
+                    float numBottle = (float)holidayPrice / (normPrice * ((float)salePrice / 100));
+                    Console.WriteLine($"Дабы покрыть Ваши расходы купите {Math.Floor(numBottle)} бутылок отменного виски");
+                }
+                else
+                {
+                    Console.WriteLine("К сожалению,  без скидки вы не окупите свои расходы");
+                }
             }
             catch (Exception)
             {
