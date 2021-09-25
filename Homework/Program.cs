@@ -24,7 +24,7 @@ namespace Homework
             Console.Write("Пусть x - порядковый номер текущего месяца.\nВведите сколько меcяцев прошло с 2 января 2020 года: ");
             int x = 1;
             time = Convert.ToInt32(Console.ReadLine());
-            x = x + time % 12;
+            x  += time % 12;
             Console.WriteLine($"x = {x}");
 
             Console.WriteLine("\nTask A1.4");
@@ -74,7 +74,7 @@ namespace Homework
             Console.WriteLine($"Цифра с порядковым номером k  - {x}");
             x = random.Next(49) * 3 + 2;
             Console.WriteLine($"k  = 3n + 2 (k<150, n есть число натуральное) k = {x}");
-            x = x / 30;
+            x /= 30;
             Console.WriteLine($"Цифра с порядковым номером k  - {x}");
 
 
@@ -84,9 +84,7 @@ namespace Homework
             Console.WriteLine($"а) А или В = {true || false}\nб) А и В = {true && false}\nв) В или С = {false || false}");
 
             Console.WriteLine("\nTask A1.10");
-            bool xBool = false;
-            bool yBool = false;
-            bool zBool = false;
+            bool xBool = false, yBool = false, zBool = false;
 
             do
             {
